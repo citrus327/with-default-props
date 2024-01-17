@@ -1,6 +1,6 @@
 {
   "name": "@citrus327/with-default-props",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "a HOC that applies default props to React component",
   "publishConfig": {
     "access": "public"
