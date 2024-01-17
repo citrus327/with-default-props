@@ -1,7 +1,7 @@
 {
-  "name": "@citrus327/my-ts-lib",
+  "name": "@citrus327/with-default-props",
   "version": "0.0.0",
-  "description": "My awesome typescript library",
+  "description": "a HOC that applies default props to React component",
   "publishConfig": {
     "access": "public"
   },
@@ -21,10 +21,21 @@
     "prepublishOnly": "pnpm run build"
   },
   "license": "MIT",
+  "peerDependencies": {
+    "react": "18.x",
+    "react-dom": "18.x"
+  },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
     "@egoist/prettier-config": "^1.0.0",
+    "@testing-library/jest-dom": "^6.2.0",
+    "@testing-library/react": "^14.1.2",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "jsdom": "^23.2.0",
     "prettier": "^3.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3",
     "vitest": "^1.1.2"
