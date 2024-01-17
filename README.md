@@ -1,23 +1,33 @@
-# @citrus327/array-partition
+# @citrus327/with-default-props
 
-![Download](https://img.shields.io/npm/dw/@citrus327/array-partition)
-![Version](https://img.shields.io/npm/v/@citrus327/array-partition)
+![Download](https://img.shields.io/npm/dw/@citrus327/with-default-props)
+![Version](https://img.shields.io/npm/v/@citrus327/with-default-props)
 
-partition an array into two.
+a HOC that applies default props to React component
 
 
 ## Installation
 
 ```sh
-pnpm install @citrus327/array-partition
+pnpm install @citrus327/with-default-props
 ```
 
 ## Usage
 
 ```ts
-const arr = [1, 2, 3, 4, 5, 6]
-const [target, rest] = partition(arr, (o) => o % 2 === 0)
+import { withDefaultProps } from '@citrus327/with-default-props'
 
-expect(target).toEqual([2, 4, 6])
-expect(rest).toEqual([1, 3, 5])
+interface SimpleProps {
+  word?: string
+}
+
+export const Simple: React.FC<SimpleProps> = (props) => {
+  return <h1>Hello{props.word}</h1>
+}
+
+
+const Wrapped = withDefaultProps(Simple, {
+  word: " world",
+})
+
 ```
